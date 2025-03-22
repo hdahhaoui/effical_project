@@ -1,32 +1,22 @@
 import streamlit as st
 import time
 
-with st.spinner("Chargement en cours..."):
-    st.image("https://github.com/hdahhaoui/effical_image/blob/main/logo_img.png", width=500)  # Remplace par le chemin ou l'URL de ton GIF
-    time.sleep(3)  # Simuler un délai de chargement
-
-st.success("Chargement terminé !")
-
-
-
-# Fonction pour animer le GIF
-#def animate(index=0):
-#    frame = frames[index]
- #   label.config(image=frame)
- #   splash.after(45, animate, (index + 1) % len(frames))  # Passer à la frame suivante
-
-
-# Lancer l'animation
-#animate()
-
-
-import streamlit as st
-import time
+# 1) La toute première instruction Streamlit du script principal doit être set_page_config
 st.set_page_config(
     page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# 2) Ensuite seulement, vous pouvez mettre les autres appels Streamlit
+with st.spinner("Chargement en cours..."):
+    time.sleep(3)  # Simuler un délai de chargement
+
+st.image("https://github.com/Ndhaoua/effical_image/blob/main/logo_img.png", width=500)
+st.success("Chargement terminé !")
+
+# ... Le reste de votre code ...
+
 # Vous pouvez ensuite mettre votre code Streamlit
 st.info("Chargement en cours...")
 
