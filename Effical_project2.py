@@ -66,7 +66,7 @@ materiaux = {
     "Cuivre": {"conductivite": 380, "masse volumique": 8930},
     "Plomb": {"conductivite": 35, "masse volumique": 11340},
 }
-import streamlit as st
+# import streamlit as st
 # La toute première instruction Streamlit doit être ici :
 st.set_page_config(
     page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
