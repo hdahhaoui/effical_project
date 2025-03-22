@@ -73,13 +73,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
 # Ensuite, seulement, on peut mettre les autres commandes Streamlit
 st.title("Mon application EffiCal")
 st.write("Bienvenue !")
-
-
-
 # Navigation via la sidebar
 page = st.sidebar.radio("Navigation", ["Accueil", "Calcul", "Résultats"])
 
