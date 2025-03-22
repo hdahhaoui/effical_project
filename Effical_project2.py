@@ -77,14 +77,17 @@ materiaux = {
 
 import streamlit as st
 
-# Placez st.set_page_config en tout premier dans votre fichier principal,
-# avant tout autre appel Streamlit (st.write, st.title, etc.).
-
+# La toute première instruction Streamlit doit être ici :
 st.set_page_config(
     page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Ensuite, seulement, on peut mettre les autres commandes Streamlit
+st.title("Mon application EffiCal")
+st.write("Bienvenue !")
+
 
 
 # Navigation via la sidebar
