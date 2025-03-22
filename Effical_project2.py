@@ -1,5 +1,7 @@
 import streamlit as st
 import time
+import  as st
+import pandas as pd
 # 1) La toute première instruction Streamlit du script principal doit être set_page_config
 st.set_page_config(
     page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
@@ -139,7 +141,7 @@ st.write("Votre application avec un thème vert attractif est active.")
 
 
 #import  as st
-import pandas as pd
+#import pandas as pd
 
 # Exemple du dictionnaire de matériaux (assurez-vous que cette variable existe déjà dans votre code)
 materiaux = {
@@ -4378,7 +4380,7 @@ else:
     st.write("Les options de configuration du plancher bas sont masquées.")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du plancher bas - Type de paroi")
 
