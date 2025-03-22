@@ -972,7 +972,7 @@ if st.button("Suivant"):
     verification_page_2()  # Assurez-vous que cette fonction est adaptée pour Streamlit
 
 
-import streamlit as st
+#import streamlit as st
 
 st.header("Configuration de la paroi Nord")
 
