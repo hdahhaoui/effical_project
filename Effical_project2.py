@@ -73,15 +73,6 @@ elif page == "Résultats":
     st.title("Résultats")
     st.write("Affichage des résultats.")
 
-
-import streamlit as st
-
-st.set_page_config(
-    page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
 # Créer un menu de navigation dans la sidebar pour simuler plusieurs pages
 page = st.sidebar.radio("Navigation", ["Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6"])
 
