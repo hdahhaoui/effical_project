@@ -1232,11 +1232,7 @@ def calcul_dep_transmission_nord():
     else:
         st.write("Pas de mur nord sélectionné, déperdition transmission nord : **0**")
         return 0
-
-# Appel de la fonction pour calculer et afficher la déperdition
 calcul_dep_transmission_nord()
-
-# Mise en page pour la section "Nord" (simulation des frames internes)
 st.markdown("---")
 st.markdown("### Configuration détaillée - Nord")
 st.info("Ici, vous pouvez ajouter d'autres réglages ou informations concernant la configuration du mur nord, similaire aux frames internes dans Tkinter.")
