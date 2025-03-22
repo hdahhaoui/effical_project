@@ -2,7 +2,7 @@ import streamlit as st
 import time
 
 with st.spinner("Chargement en cours..."):
-    st.image("chemin/vers/votre_image.gif", width=500)  # Remplace par le chemin ou l'URL de ton GIF
+    st.image("https://github.com/hdahhaoui/effical_image/blob/main/logo_img.png", width=500)  # Remplace par le chemin ou l'URL de ton GIF
     time.sleep(3)  # Simuler un délai de chargement
 
 st.success("Chargement terminé !")
