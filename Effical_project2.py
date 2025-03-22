@@ -407,7 +407,7 @@ def Ajouter_le_paroi():
         cmbol_sud.configure(values=list(resistance_des_murs.keys()))
         cmbol_Est.configure(values=list(resistance_des_murs.keys()))
         cmbol_Ouest.configure(values=list(resistance_des_murs.keys()))
-        cmbol_Nord_Ouest.configure(values=list(resistance_des_murs.keys()))
+     #   cmbol_Nord_Ouest.configure(values=list(resistance_des_murs.keys()))
         cmbol_Nord_Est.configure(values=list(resistance_des_murs.keys()))
         cmbol_Sud_Est.configure(values=list(resistance_des_murs.keys()))
         cmbol_Sud_Ouest.configure(values=list(resistance_des_murs.keys()))
@@ -970,7 +970,7 @@ if st.button("Retour"):
     st.session_state.page = "page1"  # Exemple de gestion de navigation
     st.experimental_rerun()
 # Bouton pour passer à la page 3 (après vérification)
-if st.button("Suivant"):
+#if st.button("Suivant"):
     verification_page_2()  # Assurez-vous que cette fonction est adaptée pour Streamlit
     st.write("Aller vers la page 3.")
 st.header("Configuration de la paroi Nord")
