@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-import  as st
+#import  as st
 import pandas as pd
 
 st.set_page_config(
