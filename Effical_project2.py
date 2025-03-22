@@ -16,10 +16,10 @@ st.success("Chargement terminé !")
 # Vous pouvez ensuite mettre votre code Streamlit
 st.info("Chargement en cours...")
 # Si vous voulez faire une pause (progression fictive)
-time.sleep(3)
+#time.sleep(3)
 # Affichage d'une image (après set_page_config)
-st.image("https://raw.githubusercontent.com/hdahhaoui/effical_image/blob/main/logo_img.png", width=500)
-st.success("Chargement terminé !")
+#st.image("https://raw.githubusercontent.com/hdahhaoui/effical_image/blob/main/logo_img.png", width=500)
+#st.success("Chargement terminé !")
 # --- Données de l'application ---
 # Dictionnaire pour stocker la résistance des murs
 resistance_des_murs = {}
