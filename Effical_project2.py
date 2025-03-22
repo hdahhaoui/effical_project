@@ -1,12 +1,13 @@
-import streamlit as st
-import time
-import  as st
-import pandas as pd
-# 1) La toute première instruction Streamlit du script principal doit être set_page_config
 st.set_page_config(
     page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
     layout="wide",
     initial_sidebar_state="expanded"
+
+import streamlit as st
+import time
+import  as st
+import pandas as pd
+
 )
 # 2) Ensuite seulement, vous pouvez mettre les autres appels Streamlit
 with st.spinner("Chargement en cours..."):
