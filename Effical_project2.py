@@ -950,6 +950,17 @@ else:
 
 #import streamlit as st
 
+def sup_parois():
+    st.write("Paroi supprimée (exemple).")
+    # Logique réelle pour supprimer la paroi
+
+def verification_page_2():
+    st.write("Vérification de la page 2 (exemple).")
+    # Logique réelle de vérification
+
+# On simule une variable de navigation
+if "page" not in st.session_state:
+    st.session_state.page = "page1"
 # Bouton pour supprimer la paroi créée
 if st.button("Supprimer le Paroi"):
     sup_parois()  # Assurez-vous que cette fonction est adaptée pour Streamlit
@@ -961,6 +972,7 @@ if st.button("Retour"):
 # Bouton pour passer à la page 3 (après vérification)
 if st.button("Suivant"):
     verification_page_2()  # Assurez-vous que cette fonction est adaptée pour Streamlit
+    st.write("Aller vers la page 3.")
 st.header("Configuration de la paroi Nord")
 
 # Choix de l'orientation du mur nord
