@@ -785,7 +785,7 @@ zone_climatique = wilaya[selected_wilaya][selected_groupe] if selected_wilaya in
 st.text_input("Zone Climatique", value=zone_climatique, disabled=True)
 
 # Altitude
-altitude = st.number_input("Altitude (m)", min_value=0.0, format="%.2f")
+altitude = st.number_input("Altitude (m)", min_value=0.0, step=0.1)
 
 # Latitude
 latitude = st.number_input("Latitude (°)", min_value=0.0, format="%.2f")
