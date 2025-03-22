@@ -77,12 +77,15 @@ materiaux = {
 
 import streamlit as st
 
-# Configuration de la page
+# Placez st.set_page_config en tout premier dans votre fichier principal,
+# avant tout autre appel Streamlit (st.write, st.title, etc.).
+
 st.set_page_config(
     page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
 
 # Navigation via la sidebar
 page = st.sidebar.radio("Navigation", ["Accueil", "Calcul", "Résultats"])
