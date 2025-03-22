@@ -788,7 +788,7 @@ st.text_input("Zone Climatique", value=zone_climatique, disabled=True)
 altitude = st.number_input("Altitude (m)", min_value=0.0, step=0.1)
 
 # Latitude
-latitude = st.number_input("Latitude (°)", min_value=0.0, format="%.2f")
+latitude = st.number_input("Latitude (°)", min_value=0.0, step=0.1)
 
 # Type de logement
 type_bati = st.selectbox(
