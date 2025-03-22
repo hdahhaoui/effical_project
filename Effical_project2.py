@@ -96,7 +96,7 @@ elif page == "Page 6":
     st.write("Contenu de la page 6.")
 
 
-#import streamlit as st
+#import  as st
 
 # Option de thème via la sidebar
 use_green_theme = st.sidebar.checkbox("Activer le thème vert attractif", value=True)
@@ -138,7 +138,7 @@ st.write("Votre application avec un thème vert attractif est active.")
 
 
 
-#import streamlit as st
+#import  as st
 import pandas as pd
 
 # Exemple du dictionnaire de matériaux (assurez-vous que cette variable existe déjà dans votre code)
@@ -205,7 +205,7 @@ st.dataframe(df)
 
 
 
-#import streamlit as st
+#import  as st
 
 # On suppose que les variables suivantes sont gérées via st.session_state :
 # - st.session_state["selected_mater_name"] : Le nom du matériau sélectionné (anciennement récupéré via tree.focus())
@@ -249,7 +249,7 @@ def ajouter_le_materiaux():
 
     st.success(f"Matériau '{mater_name}' avec épaisseur {epaisseur} m ajouté à la liste.")
 
-# Exemple d'interface Streamlit pour démontrer la fonction
+# Exemple d'interface  pour démontrer la fonction
 st.markdown("### Sélection d'un matériau")
 # Sélection d'un matériau (remplace tree.focus())
 materiaux_disponibles = ["Mortier de chaux", "Carreaux de plâtre pleins", "Liège Comprimé"]
@@ -269,7 +269,7 @@ else:
     st.write("Aucun matériau ajouté pour le moment.")
 
 
-#import streamlit as st
+#import  as st
 
 # Exemple de liste globale de matériaux avec leur épaisseur et leur conductivité
 # Cette liste devrait être définie et mise à jour dans votre application
@@ -1361,7 +1361,7 @@ combo_type_port_exterieur_nord = st.selectbox(
 )
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration de la partie Nord")
 
@@ -1447,7 +1447,7 @@ combo_type_port_exterieur_nord = st.selectbox(
 )
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Sud")
 
@@ -1492,7 +1492,7 @@ orientation_radio_sud = st.radio(
     index=0
 )
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration Fenêtre et Port - Sud")
 
@@ -1570,7 +1570,7 @@ type_port_contacte_sud = st.selectbox(
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Est")
 
@@ -1618,7 +1618,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # --- Données simulées ---
 # Exemple de dictionnaire des parois (résistance, masse)
@@ -1747,7 +1747,7 @@ if st.button("Calculer déperdition de la fenêtre Est"):
         st.write(f"Déperdition fenêtre Est : **{dep_fenetre:.3f}**")
 
 
-import streamlit as st
+#import streamlit as st
 
 def port_Est():
     # Sélection du type de contact du port
@@ -1815,7 +1815,7 @@ if st.button("Calculer déperdition du port Est"):
     st.write(f"Déperdition du port Est : {dep:.3f}")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Calcul de la Déperdition Transmission - Côté Est")
 
@@ -1881,7 +1881,7 @@ st.info("Ici, vous pouvez ajouter d'autres paramètres et réglages spécifiques
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Est")
 
@@ -1921,7 +1921,7 @@ st.write("Mur homogène :", homogene_Est)
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Est - Options avancées")
 
@@ -2018,7 +2018,7 @@ st.write("Matériau de porte :", materiau_port_est)
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Ouest - Sélection et Homogénéité")
 
@@ -2057,7 +2057,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # Exemple de données : dictionnaire des murs (pour le côté Ouest)
 if "resistance_des_murs" not in st.session_state:
@@ -2178,7 +2178,7 @@ if st.button("Calculer déperdition fenêtre Ouest"):
         st.write(f"Déperdition fenêtre Ouest : **{dep_fenetre:.3f}**")
 
 
-import streamlit as st
+#import streamlit as st
 
 def port_Ouest():
     # Sélection du type de contact du port
@@ -2244,7 +2244,7 @@ if st.button("Calculer déperdition du port Ouest"):
     st.write(f"Déperdition du port Ouest : {dep:.3f}")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Calcul de la Déperdition Transmission - Côté Ouest")
 
@@ -2323,7 +2323,7 @@ st.info("Réglages supplémentaires pour le mur Ouest peuvent être configurés 
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Ouest")
 
@@ -2366,7 +2366,7 @@ if st.button("Valider configuration Ouest"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Ouest - Options avancées")
 
@@ -2466,7 +2466,7 @@ st.write("Matériau de porte :", materiau_port_ouest)
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Nord-Est")
 
@@ -2505,7 +2505,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # On s'assure que le dictionnaire des murs est défini dans st.session_state
 if "resistance_des_murs" not in st.session_state:
@@ -2545,7 +2545,7 @@ if st.button("Calculer déperdition paroi Nord-Est"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 def calcul_dep_fenetre_Nord_Est():
     # Sélection du type de fenêtre
@@ -2634,7 +2634,7 @@ if st.button("Calculer déperdition fenêtre Nord-Est"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 def port_Nord_Est():
     # Sélection du type de contact du port
@@ -2701,7 +2701,7 @@ if st.button("Calculer déperdition du port Nord-Est"):
     st.write(f"Déperdition du port Nord-Est : {dep:.3f}")
     
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Calcul de la Déperdition Transmission - Côté Nord-Est")
 
@@ -2748,7 +2748,7 @@ else:
     st.info("Déperdition transmission Nord-Est : 0.000 W")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Nord-Est")
 
@@ -2791,7 +2791,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Nord-Est - Options avancées")
 
@@ -2902,7 +2902,7 @@ st.write("Contact port :", contact_port_nord_est)
 st.write("Matériau de porte :", type_port_nord_est)
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Nord-Ouest")
 
@@ -2928,7 +2928,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Nord-Est")
 
@@ -3017,7 +3017,7 @@ if st.button("Calculer déperdition paroi Nord-Est"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 def calcul_dep_fenetre_Nord_Ouest():
     # Sélection du type de fenêtre
@@ -3103,7 +3103,7 @@ if st.button("Calculer déperdition fenêtre Nord-Ouest"):
         st.write(f"Déperdition de la fenêtre Nord-Ouest : {dep_value:.3f}")
 
 
-import streamlit as st
+#import streamlit as st
 
 def port_Nord_Ouest():
     # Sélection du type de contact du port
@@ -3170,7 +3170,7 @@ if st.button("Calculer déperdition du port Nord-Ouest"):
     st.write(f"Déperdition du port Nord-Ouest : {dep_value:.3f}")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Calcul de la Déperdition Transmission - Côté Nord-Ouest")
 
@@ -3225,7 +3225,7 @@ st.markdown("### Section Nord-Ouest - Configuration détaillée")
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Nord-Ouest")
 
@@ -3267,7 +3267,7 @@ else:
     st.info("Configuration pour mur non homogène activée.")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Nord-Ouest - Options avancées")
 
@@ -3407,7 +3407,7 @@ def paroi_Sud_Est():
 paroi_Sud_Est()
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Sud-Est - Homogénéité")
 
@@ -3433,7 +3433,7 @@ else:
     materiaux_fenetre_sud_est = st.selectbox("Matériaux de fenêtre Sud-Est", options=["Bois", "Metal"], index=0)
     st.markdown("Options supplémentaires pour mur non homogène activées.")
 
-import streamlit as st
+#import streamlit as st
 
 # On s'assure que le dictionnaire des murs est défini
 if "resistance_des_murs" not in st.session_state:
@@ -3474,7 +3474,7 @@ if st.button("Calculer déperdition paroi Sud-Est"):
     st.success(f"Déperdition paroi Sud-Est : {dep:.3f} W")
 
 
-import streamlit as st
+#import streamlit as st
 
 def calcul_dep_fenetre_Sud_Est():
     # Sélection du type de fenêtre
@@ -3556,7 +3556,7 @@ if st.button("Calculer déperdition de la fenêtre (Sud-Est)"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 def port_Sud_Est():
     # Sélection du type de contact du port
@@ -3623,7 +3623,7 @@ if st.button("Calculer déperdition du port Sud-Est"):
     st.write(f"Déperdition du port Sud-Est : {dep_value:.3f}")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Calcul de la Déperdition Transmission - Côté Sud-Est")
 
@@ -3722,7 +3722,7 @@ st.markdown("---")
 st.markdown("### Section Sud-Est - Configuration détaillée")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Sud-Est - Sélection et Homogénéité")
 
@@ -3765,7 +3765,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Sud-Est - Options avancées")
 
@@ -3857,7 +3857,7 @@ materiau_port = st.selectbox(
 )
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Sud-Ouest")
 
@@ -3907,7 +3907,7 @@ else:
     st.write("Les options de configuration sont désactivées car le mur n'est pas présent.")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Sud-Est - Homogénéité")
 
@@ -3969,7 +3969,7 @@ else:
     st.write("- Matériaux de fenêtre :", materiaux_fenetre_sud_est)
 
 
-import streamlit as st
+#import streamlit as st
 
 # On s'assure que le dictionnaire des murs est défini dans st.session_state
 if "resistance_des_murs" not in st.session_state:
@@ -4011,7 +4011,7 @@ if st.button("Calculer la déperdition de la paroi"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 def calcul_dep_fenetre_Sud_Ouest():
     # Sélection du type de fenêtre (équivalent de combo_type_fenetre_Sud_Ouest.get())
@@ -4098,7 +4098,7 @@ if st.button("Calculer déperdition fenêtre Sud-Ouest"):
         st.success(f"Déperdition de la fenêtre Sud-Ouest : {dep_value:.3f}")
 
 
-import streamlit as st
+#import streamlit as st
 
 def port_Sud_Ouest():
     # Sélection du type de contact du port (équivalent de combo_type_contacte_port_exterieur_Sud_Ouest.get())
@@ -4167,7 +4167,7 @@ if st.button("Calculer déperdition du port Sud-Ouest"):
     st.write(f"Déperdition du port Sud-Ouest : {dep_value:.3f}")
 
 
-import streamlit as st
+#import streamlit as st
 
 # Dummy functions for demonstration purposes.
 # Replace these with your actual implementations if available.
@@ -4233,7 +4233,7 @@ with st.container():
         calcul_dep_transmission_Sud_Ouest()
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Sud-Ouest - Sélection et Homogénéité")
 
@@ -4277,7 +4277,7 @@ else:
     st.info("Configuration pour mur non homogène activée.")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du mur Sud-Ouest - Sélection et Homogénéité")
 
@@ -4352,7 +4352,7 @@ materiau_port = st.selectbox(
 )
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du plancher bas")
 
@@ -4439,7 +4439,7 @@ elif option_type_plancher == "Option 2":
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # Widgets de saisie pour la configuration du plancher bas
 
@@ -4511,7 +4511,7 @@ if st.button("Calculer déperdition du plancher bas"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # Fonction info pour afficher une fenêtre d'information (simulée)
 def info():
@@ -4561,7 +4561,7 @@ with st.container():
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du plancher bas")
 
@@ -4621,7 +4621,7 @@ if st.button("Info"):
     st.info("Vous pouvez déterminer la valeur de Ks en vous basant sur les informations du fichier DTR C3.2/4, pages 68 à 73.")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du plancher terrasse")
 
@@ -4658,7 +4658,7 @@ else:
     )
 
 
-import streamlit as st
+#import streamlit as st
 
 # Simulation d'un dictionnaire de résistance pour les murs (à adapter selon vos données)
 if "resistance_des_murs" not in st.session_state:
@@ -4723,7 +4723,7 @@ with st.container():
         calcul_dep_Plancher_Terrasse()
 
 
-import streamlit as st
+#import streamlit as st
 
 # Définissez votre fonction de callback (similaire à la commande "command=paroi_Plancher_Terrasse")
 def paroi_Plancher_Terrasse():
@@ -4743,7 +4743,7 @@ var_Plancher_Terrasse = st.radio(
 paroi_Plancher_Terrasse()
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du plancher terrasse")
 
@@ -4776,7 +4776,7 @@ surface_plancher = st.number_input(
 st.write("Surface saisie :", surface_plancher, "m²")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du Local Non Chauffé")
 
@@ -4813,7 +4813,7 @@ else:
     )
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Local Non Chauffé - Configuration et Calcul")
 
@@ -4910,7 +4910,7 @@ if local_non_chauffe == "Oui":
 else:
     st.info("Local non chauffé désactivé.")
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration du Local Non Chauffé - Paramètres du Mur")
 
@@ -4971,7 +4971,7 @@ st.write("T extérieur :", Text, "°C")
 
 
 
-import streamlit as st
+#import streamlit as st
 
 def calcul_dep():
     # Ces fonctions doivent être définies ailleurs dans votre code Streamlit.
@@ -5017,7 +5017,7 @@ if st.button("Calculer déperdition totale par transmission"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # Supposons que ces fonctions soient définies ailleurs dans votre application
 def calcul_dep():
@@ -5049,7 +5049,7 @@ with st.container():
             calcul_dep_show_pag_2()
 
 
-import streamlit as st
+#import streamlit as st
 
 # Dictionnaires de valeurs
 valeurs_P0 = {
@@ -5121,7 +5121,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # Dictionnaires de valeurs
 valeurs_P0 = {
@@ -5187,7 +5187,7 @@ def calculer_page_5():
 if st.button("Calculer et aller à la page 5"):
     calculer_page_5()
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Ajout des fenêtres / Configuration du plancher terrasse")
 
@@ -5220,7 +5220,7 @@ surface_plancher = st.number_input(
 st.write("Surface saisie :", surface_plancher, "m²")
 
 
-import streamlit as st
+#import streamlit as st
 
 # Dictionnaire de rugosité (exemple)
 rugosite_dict = {
@@ -5257,7 +5257,7 @@ st.write("Site d'Implantation sélectionné :", site_implantation)
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Renouvellement d'Air et Navigation")
 
@@ -5295,7 +5295,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 def get_temperature(zone, altitude):
     temp_ranges = {
@@ -5329,7 +5329,7 @@ else:
     st.error("Aucune température trouvée pour ces paramètres.")
 
 
-import streamlit as st
+#import streamlit as st
 
 # Dummy functions and variables to simulate the environment:
 def get_temperature(zone, altitude):
@@ -5433,7 +5433,7 @@ if st.button("Vérifier le confort"):
 st.markdown("## Fin de la vérification du confort")
 
 
-import streamlit as st
+#import streamlit as st
 
 # Dummy implementations for demonstration.
 # Remplacez ces fonctions par vos propres implémentations si nécessaire.
@@ -5456,7 +5456,7 @@ if st.button("Finaliser"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # Titre de la page
 st.markdown("<h2 style='text-align: center;'>Verification</h2>", unsafe_allow_html=True)
@@ -5516,7 +5516,7 @@ with col2:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # Supposons que ces widgets d'entrée ont été définis sur une page précédente et stockés dans st.session_state
 # Vous pouvez les simuler ainsi pour le test :
@@ -5555,7 +5555,7 @@ with st.container():
     st.write("Site d'implantation :", st.session_state.get("entry_site_projet", ""))
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Information de Projet")
 # Création de deux colonnes pour organiser l'interface
@@ -5596,7 +5596,7 @@ st.markdown("---")
 st.markdown("### Fin de la configuration")
 
 
-import streamlit as st
+#import streamlit as st
 
 # Dummy functions to simulate page navigation
 def show_page_verifie_1():
