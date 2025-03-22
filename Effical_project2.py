@@ -9,14 +9,14 @@ st.set_page_config(
 # 2) Ensuite seulement, vous pouvez mettre les autres appels Streamlit
 with st.spinner("Chargement en cours..."):
     time.sleep(3)  # Simuler un délai de chargement
-st.image("https://github.com/Ndhaoua/effical_image/blob/main/logo_img.png", width=500)
+st.image("https://github.com/hdahhaoui/effical_image/blob/main/logo_img.png", width=500)
 st.success("Chargement terminé !")
 # Vous pouvez ensuite mettre votre code Streamlit
 st.info("Chargement en cours...")
 # Si vous voulez faire une pause (progression fictive)
 time.sleep(3)
 # Affichage d'une image (après set_page_config)
-st.image("https://github.com/Ndhaoua/effical_image/blob/main/logo_img.png?raw=true", width=500)
+st.image("https://github.com/hdahhaoui/effical_image/blob/main/logo_img.png", width=500)
 st.success("Chargement terminé !")
 # --- Données de l'application ---
 # Dictionnaire pour stocker la résistance des murs
