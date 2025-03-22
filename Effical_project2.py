@@ -70,22 +70,22 @@ page = st.sidebar.radio("Navigation", ["Page 1", "Page 2", "Page 3", "Page 4", "
 
 if page == "Page 1":
     st.title("Page 1 - Accueil")
-    st.write("Contenu de la page 1.")
+ #   st.write("Contenu de la page 1.")
 elif page == "Page 2":
     st.title("Page 2 - Calcul")
-    st.write("Contenu de la page 2.")
+  #  st.write("Contenu de la page 2.")
 elif page == "Page 3":
     st.title("Page 3 - Données")
-    st.write("Contenu de la page 3.")
+  #  st.write("Contenu de la page 3.")
 elif page == "Page 4":
     st.title("Page 4 - Informations")
-    st.write("Contenu de la page 4.")
+  #  st.write("Contenu de la page 4.")
 elif page == "Page 5":
     st.title("Page 5 - Résultats")
-    st.write("Contenu de la page 5.")
+ #   st.write("Contenu de la page 5.")
 elif page == "Page 6":
     st.title("Page 6 - Autres")
-    st.write("Contenu de la page 6.")
+ #   st.write("Contenu de la page 6.")
 
 
 #import  as st
@@ -126,7 +126,7 @@ else:
         unsafe_allow_html=True,
     )
 
-st.write("Votre application avec un thème vert attractif est active.")
+# st.write("Votre application avec un thème vert attractif est active.")
 
 
 
