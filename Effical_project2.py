@@ -7,7 +7,7 @@ st.set_page_config(
     page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
     layout="wide",
     initial_sidebar_state="expanded"
-
+)
 with st.spinner("Chargement en cours..."):
     time.sleep(3)  # Simuler un délai de chargement
 st.image("https://raw.githubusercontent.com/hdahhaoui/effical_image.git", width=500)
