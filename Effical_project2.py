@@ -96,7 +96,7 @@ elif page == "Page 6":
     st.write("Contenu de la page 6.")
 
 
-import streamlit as st
+#import streamlit as st
 
 # Option de thème via la sidebar
 use_green_theme = st.sidebar.checkbox("Activer le thème vert attractif", value=True)
@@ -138,7 +138,7 @@ st.write("Votre application avec un thème vert attractif est active.")
 
 
 
-import streamlit as st
+#import streamlit as st
 import pandas as pd
 
 # Exemple du dictionnaire de matériaux (assurez-vous que cette variable existe déjà dans votre code)
@@ -205,7 +205,7 @@ st.dataframe(df)
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # On suppose que les variables suivantes sont gérées via st.session_state :
 # - st.session_state["selected_mater_name"] : Le nom du matériau sélectionné (anciennement récupéré via tree.focus())
@@ -269,7 +269,7 @@ else:
     st.write("Aucun matériau ajouté pour le moment.")
 
 
-import streamlit as st
+#import streamlit as st
 
 # Exemple de liste globale de matériaux avec leur épaisseur et leur conductivité
 # Cette liste devrait être définie et mise à jour dans votre application
@@ -433,7 +433,7 @@ def Ajouter_le_paroi():
     for nompar in resistance_des_murs:
         print(f"{nompar},leur resistance est :{resistance_total_he_hiver:.3f}")
 
-import streamlit as st
+#import streamlit as st
 
 # -------------------------
 # Fonctions pour la logique métier
@@ -502,7 +502,7 @@ else:
 
 
 
-import streamlit as st
+#import streamlit as st
 
 # Dictionnaire complet des wilayas
 wilaya = {
@@ -698,7 +698,7 @@ st.write(f"La zone climatique correspondante est : **{zone}**")
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.title("Information de Projet")
 
@@ -765,7 +765,7 @@ if st.button("Afficher les coefficients"):
     else:
         st.write("Valeurs non définies")
 
-import streamlit as st
+#import streamlit as st
 
 st.header("Information de Projet")
 
@@ -808,8 +808,8 @@ if st.button("Suivant"):
     st.session_state.type_bati = type_bati
     st.success("Informations sauvegardées. Passez à la page suivante.")
 
-import streamlit as st
-import pandas as pd
+#import streamlit as st
+#import pandas as pd
 
 st.header("Ajouter des parois")
 
@@ -877,8 +877,8 @@ if filtered_materiaux:
     st.info(f"Matériau sélectionné : {selected_material}")
 
 
-import streamlit as st
-import pandas as pd
+#import streamlit as st
+#import pandas as pd
 
 st.header("Gestion des Matériaux et Parois")
 
@@ -956,7 +956,7 @@ else:
     st.info("Aucune paroi créée pour le moment.")
 
 
-import streamlit as st
+#import streamlit as st
 
 # Bouton pour supprimer la paroi créée
 if st.button("Supprimer le Paroi"):
@@ -966,14 +966,9 @@ if st.button("Supprimer le Paroi"):
 if st.button("Retour"):
     st.session_state.page = "page1"  # Exemple de gestion de navigation
     st.experimental_rerun()
-
 # Bouton pour passer à la page 3 (après vérification)
 if st.button("Suivant"):
     verification_page_2()  # Assurez-vous que cette fonction est adaptée pour Streamlit
-
-
-#import streamlit as st
-
 st.header("Configuration de la paroi Nord")
 
 # Choix de l'orientation du mur nord
@@ -1021,7 +1016,7 @@ else:
     st.write("Aucun mur nord sélectionné. La configuration de la paroi nord est ignorée.")
 
 
-import streamlit as st
+#import streamlit as st
 
 def calcul_dep_fenetre_nord():
     # Sélection du type de fenêtre
@@ -1101,7 +1096,7 @@ if st.button("Calculer déperdition de la fenêtre nord"):
     st.write(f"Déperdition de la fenêtre nord : {dep:.3f}")
 
 
-import streamlit as st
+#import streamlit as st
 
 def port_nord():
     # Sélection du type de contact
@@ -1162,7 +1157,7 @@ if st.button("Calculer déperdition du port nord"):
 
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Entrée des Surfaces et Matériaux")
 st.markdown("### Nord")
@@ -1243,7 +1238,7 @@ st.markdown("### Configuration détaillée - Nord")
 st.info("Ici, vous pouvez ajouter d'autres réglages ou informations concernant la configuration du mur nord, similaire aux frames internes dans Tkinter.")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.subheader("Configuration du mur nord")
 
@@ -1280,7 +1275,7 @@ else:
     st.info("Configuration pour mur non homogène sélectionnée")
 
 
-import streamlit as st
+#import streamlit as st
 
 st.markdown("## Configuration de la partie Nord")
 
