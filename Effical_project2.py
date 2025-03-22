@@ -22,23 +22,15 @@ st.success("Chargement terminé !")
 
 import streamlit as st
 import time
-
-# --- Affichage d'un écran de chargement (splash) avec Streamlit ---
 with st.spinner("Chargement en cours..."):
-    # Remplace le chemin par celui de ton image ou une URL
     st.image("https://github.com/hdahhaoui/effical_image/blob/main/logo_img.png", width=500)
     time.sleep(3)  # Simule un délai de chargement
-
 st.success("Chargement terminé !")
-
 # --- Données de l'application ---
-
 # Dictionnaire pour stocker la résistance des murs
 resistance_des_murs = {}
-
 # Liste pour stocker les matériaux avec leur épaisseur
 nom_mat_epai = []
-
 # la liste des materiaux et leur conductivite
 materiaux = {
     "Mortier de chaux": {"conductivite": 0.87, "masse volumique": 1800},
@@ -74,9 +66,7 @@ materiaux = {
     "Cuivre": {"conductivite": 380, "masse volumique": 8930},
     "Plomb": {"conductivite": 35, "masse volumique": 11340},
 }
-
 import streamlit as st
-
 # La toute première instruction Streamlit doit être ici :
 st.set_page_config(
     page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
