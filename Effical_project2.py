@@ -26,7 +26,7 @@ import time
 # --- Affichage d'un écran de chargement (splash) avec Streamlit ---
 with st.spinner("Chargement en cours..."):
     # Remplace le chemin par celui de ton image ou une URL
-    st.image("chemin/vers/votre_image.gif", width=500)
+    st.image("https://github.com/hdahhaoui/effical_image/blob/main/logo_img.png", width=500)
     time.sleep(3)  # Simule un délai de chargement
 
 st.success("Chargement terminé !")
