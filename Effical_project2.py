@@ -1,12 +1,12 @@
-st.set_page_config(
-    page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
-    layout="wide",
-    initial_sidebar_state="expanded"
-
 import streamlit as st
 import time
 import  as st
 import pandas as pd
+
+st.set_page_config(
+    page_title="EffiCal - Calcul thermique des bâtiments selon le DTR C3.2/4",
+    layout="wide",
+    initial_sidebar_state="expanded"
 
 with st.spinner("Chargement en cours..."):
     time.sleep(3)  # Simuler un délai de chargement
