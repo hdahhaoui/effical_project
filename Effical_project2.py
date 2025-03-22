@@ -144,7 +144,7 @@ materiaux = {
     "Mortier de ciment": {"conductivite": 1.4, "masse volumique": 2200},
     "Lame d'air": {"conductivite": 1, "masse volumique": 1},
     "Enduit platre": {"conductivite": 0.35, "masse volumique": 1300},
-    "Enduit de ciment ": {"conductivite": 0.87, "masse volumique": 1400},
+ #   "Enduit de ciment ": {"conductivite": 0.87, "masse volumique": 1400},
     "Béton lourd 1": {"conductivite": 1.75, "masse volumique": 2350},
     "Béton pleine ": {"conductivite": 1.75, "masse volumique": 2200},
     "Béton lourd 2": {"conductivite": 1.29, "masse volumique": 2350},
