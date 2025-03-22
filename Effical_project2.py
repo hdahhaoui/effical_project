@@ -12,6 +12,46 @@ with st.spinner("Chargement en cours..."):
     time.sleep(3)  # Simuler un délai de chargement
 st.image("https://raw.githubusercontent.com/hdahhaoui/effical_image.git", width=500)
 st.success("Chargement terminé !")
+
+# Nom du projet
+nom_projet = st.text_input("Nom du Projet")
+
+# Wilaya
+# On suppose que le dictionnaire 'wilaya' est déjà défini (cf. code précédent)
+selected_wilaya = st.selectbox("Wilaya", list(wilaya.keys()))
+
+# Groupe de Communes
+groupes = list(wilaya[selected_wilaya].keys()) if selected_wilaya in wilaya else []
+selected_groupe = st.selectbox("Groupe de Communes", groupes)
+
+# Zone climatique (affichage automatique)
+zone_climatique = wilaya[selected_wilaya][selected_groupe] if selected_wilaya in wilaya and selected_groupe in wilaya[selected_wilaya] else ""
+st.text_input("Zone Climatique", value=zone_climatique, disabled=True)
+
+# Altitude
+altitude = st.number_input("Altitude (m)", min_value=0.0, step=0.1)
+
+# Latitude
+latitude = st.number_input("Latitude (°)", min_value=0.0, step=0.1)
+
+# Type de logement
+type_bati = st.selectbox(
+    "Type de logement",
+    ["", "Logement individuel", "Logement en immeubles collectifs, bureaux, locaux à usage d'hébergement"]
+)
+
+# Bouton Suivant
+if st.button("Suivant"):
+    # Vous pouvez sauvegarder ces informations dans st.session_state ou passer à une autre "page"
+    st.session_state.nom_projet = nom_projet
+    st.session_state.wilaya = selected_wilaya
+    st.session_state.groupe = selected_groupe
+    st.session_state.zone_climatique = zone_climatique
+    st.session_state.altitude = altitude
+    st.session_state.latitude = latitude
+    st.session_state.type_bati = type_bati
+    st.success("Informations sauvegardées. Passez à la page suivante.")
+
 resistance_des_murs = {}
 # Liste pour stocker les matériaux avec leur épaisseur
 nom_mat_epai = []
@@ -761,44 +801,7 @@ if st.button("Afficher les coefficients"):
 
 st.header("Information de Projet")
 
-# Nom du projet
-nom_projet = st.text_input("Nom du Projet")
 
-# Wilaya
-# On suppose que le dictionnaire 'wilaya' est déjà défini (cf. code précédent)
-selected_wilaya = st.selectbox("Wilaya", list(wilaya.keys()))
-
-# Groupe de Communes
-groupes = list(wilaya[selected_wilaya].keys()) if selected_wilaya in wilaya else []
-selected_groupe = st.selectbox("Groupe de Communes", groupes)
-
-# Zone climatique (affichage automatique)
-zone_climatique = wilaya[selected_wilaya][selected_groupe] if selected_wilaya in wilaya and selected_groupe in wilaya[selected_wilaya] else ""
-st.text_input("Zone Climatique", value=zone_climatique, disabled=True)
-
-# Altitude
-altitude = st.number_input("Altitude (m)", min_value=0.0, step=0.1)
-
-# Latitude
-latitude = st.number_input("Latitude (°)", min_value=0.0, step=0.1)
-
-# Type de logement
-type_bati = st.selectbox(
-    "Type de logement",
-    ["", "Logement individuel", "Logement en immeubles collectifs, bureaux, locaux à usage d'hébergement"]
-)
-
-# Bouton Suivant
-if st.button("Suivant"):
-    # Vous pouvez sauvegarder ces informations dans st.session_state ou passer à une autre "page"
-    st.session_state.nom_projet = nom_projet
-    st.session_state.wilaya = selected_wilaya
-    st.session_state.groupe = selected_groupe
-    st.session_state.zone_climatique = zone_climatique
-    st.session_state.altitude = altitude
-    st.session_state.latitude = latitude
-    st.session_state.type_bati = type_bati
-    st.success("Informations sauvegardées. Passez à la page suivante.")
 
 #import streamlit as st
 #import pandas as pd
