@@ -238,27 +238,68 @@ st.dataframe(df)
 
 
 
-# fonction pour ajouter le materiaux choisi au list de materiaux choisi
-def ajouter_le_materiaux():
-    try:
-        materiaux_chosi = tree.focus()  # recupirer elem selectioner
-        valeur_mat_choisi = tree.item(materiaux_chosi, "values")
-        mater_name = valeur_mat_choisi[0]
-        epaisseur = entry_epai.get()
-        if not epaisseur:
-            messagebox.showerror("erreur", "veuillez saisir l'epaisseur de materiaux")
-            return
-        try:
-            epaisseur = float(entry_epai.get())
-        except ValueError:
-            messagebox.showerror("erreur", "l'epaisseur doit etre un nombre")
-            return
-        nom_mat_epai.append((mater_name, epaisseur))
-        entry_epai.delete(0, END)
+import streamlit as st
 
-        lis_de_mat_choisi.insert(END, f"{mater_name} -- {epaisseur} m")
-    except IndexError:
-        messagebox.showerror("erreur", "veuillez selectionner le materiaux")
+# On suppose que les variables suivantes sont gérées via st.session_state :
+# - st.session_state["selected_mater_name"] : Le nom du matériau sélectionné (anciennement récupéré via tree.focus())
+# - st.session_state["entry_epai"] : La saisie de l'épaisseur
+# - st.session_state["nom_mat_epai"] : La liste des matériaux et épaisseurs choisis
+# - st.session_state["lis_de_mat_choisi"] : La liste (ou structure) où l'on affiche les matériaux choisis
+
+def ajouter_le_materiaux():
+    """Ajoute le matériau choisi à la liste de matériaux avec son épaisseur."""
+    # Récupérer le nom du matériau sélectionné
+    mater_name = st.session_state.get("selected_mater_name", "")
+    if not mater_name:
+        st.error("Erreur : Veuillez d'abord sélectionner un matériau.")
+        return
+
+    # Récupérer l'épaisseur saisie
+    epaisseur_str = st.session_state.get("entry_epai", "")
+    if not epaisseur_str:
+        st.error("Erreur : Veuillez saisir l'épaisseur du matériau.")
+        return
+
+    # Vérifier si l'épaisseur est un nombre
+    try:
+        epaisseur = float(epaisseur_str)
+    except ValueError:
+        st.error("Erreur : L'épaisseur doit être un nombre.")
+        return
+
+    # Ajouter le matériau et l'épaisseur à la liste
+    if "nom_mat_epai" not in st.session_state:
+        st.session_state["nom_mat_epai"] = []
+    st.session_state["nom_mat_epai"].append((mater_name, epaisseur))
+
+    # Vider le champ d'épaisseur après l'ajout
+    st.session_state["entry_epai"] = ""
+
+    # Mettre à jour l'affichage de la liste des matériaux choisis
+    if "lis_de_mat_choisi" not in st.session_state:
+        st.session_state["lis_de_mat_choisi"] = []
+    st.session_state["lis_de_mat_choisi"].append(f"{mater_name} -- {epaisseur} m")
+
+    st.success(f"Matériau '{mater_name}' avec épaisseur {epaisseur} m ajouté à la liste.")
+
+# Exemple d'interface Streamlit pour démontrer la fonction
+st.markdown("### Sélection d'un matériau")
+# Sélection d'un matériau (remplace tree.focus())
+materiaux_disponibles = ["Mortier de chaux", "Carreaux de plâtre pleins", "Liège Comprimé"]
+selected_mat = st.selectbox("Choisissez un matériau :", options=materiaux_disponibles, key="selected_mater_name")
+
+st.markdown("### Épaisseur du matériau (m)")
+st.text_input("Épaisseur (m)", key="entry_epai")
+
+if st.button("Ajouter matériau"):
+    ajouter_le_materiaux()
+
+st.markdown("### Liste des matériaux choisis :")
+if "lis_de_mat_choisi" in st.session_state and st.session_state["lis_de_mat_choisi"]:
+    for idx, item in enumerate(st.session_state["lis_de_mat_choisi"]):
+        st.write(f"- {item}")
+else:
+    st.write("Aucun matériau ajouté pour le moment.")
 
 
 import streamlit as st
